@@ -1,0 +1,54 @@
+p {color:black; font-family: "Avenir Light" ; text-align: center; margin-right: 20%; margin-left: 20%;margin-top: 4%; margin-bottom: 6%; font-size: 20px; line-height: 27px}
+	h1{font-family: "Forum"; font-weight: bold ; text-align: center; font-size: 50px; margin-right: 5%; margin-left: 5%;margin-bottom: 0%}
+   body{background-image: url(background2.jpg)  ; background-size: 100%; }
+   @font-face {
+  font-family: Forum;
+  src: url(Forum-Regular.ttf);
+}
+
+   
+   div.gallery {
+  border: 1px solid #ccc;
+ 
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 25%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 50%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+    

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+    <link rel="stylesheet" href ="subpages.css" type ="text/css"/>
+	<link rel="stylesheet" href ="menu.css" />
+	<meta name= "author" content ="Lisa-CLaudia Levy" />
+	<meta name= "description" content ="Lisa-CLaudia Levy contact info " />
+	<meta name= "keywords" content ="Lisa-CLaudia Levy, contact Lisa-CLaudia Levy, contact form, email info, whatsapp, art, entrepreneurship" />
+      <title>contact</title>
+
+	<style>
+	
+  p {color:black; font-family: "Avenir Light" ; text-align: center; margin-right: 20%; margin-left: 20%;margin-top: 4%; margin-bottom: 6%; ; line-height: 27px}
+		ul#one{color:black; font-family: "Avenir Light" ;text-align: left; width:50%;}
+		h1{font-family: "Forum";  font-weight: bold ;text-align: center; font-size: 40px; margin-right: 5%; margin-left: 5%;margin-top: 5%}
+   		body{background-image: url(background2.jpg)  ; background-size: 100%; }
+		form { color:black; font-family: "Avenir Light" ; text-align: left;
+              width:60%; margin-right:auto; margin-left:auto; 
+               
+                border:2px solid black ; margin-top: 4%;padding-left: 2%;
+                padding-right:auto 
+  }
+		.boxwhitemiddle{ background-color: white ; width: 60%; text-align: center;margin-left:auto; margin-right:auto; border: 2px solid black; margin-top:10%; margin-bottom: 10% }
+		.boxwhitemiddle > p {margin-left: 3%;margin-right: 3%;}
+		.boxwhiteleft{background-color: white ; width: 40%; margin-left:20%; margin-right:80%}
+		.c1{ width:30%;}
+		.c2{ width: 20%}
+  		.c3{ width:60%;text-align: left;}
+		caption{  margin-bottom: 5%;font-weight: bold ; text-align: center; }
+		table{margin-left:auto; margin-right:auto; font-family: "Forum";padding: 5%}
+		td{padding: 13px;}
+    
+    </style>
+	<script type="text/javascript">
+     function showData(event) {
+    event.preventDefault(); // Prevent form submission
+
+    var myform = document.getElementById("dafrm");
+    var myname = myform.name.value.trim();
+    var myemail = myform.email.value.trim();
+    var mywhatsapp = myform.whatsapp.value.trim();
+    var myimessage = myform.imessage.value.trim();
+    var mysubject = myform.subject.value.trim();
+    var myclass = myform.myclass.value;
+    var urgent = myform.urgent.value;
+    var work = myform.work;
+    var myprof = myform.myprof.value;
+    var mysuggs = myform.mysuggs.value.trim();
+
+    if (myname === "") {
+        alert("Please enter your name.");
+        return;
+    }
+
+
+    if (myemail === "" && mywhatsapp === "" && myimessage === "") {
+        alert("Please enter an email, WhatsApp, or iMessage to contact you.");
+        return;
+    }
+
+   
+    if (mysubject === "") {
+        alert("Please enter a subject of inquiry.");
+        return;
+    }
+if (mysuggs === "") {
+        alert("Please enter your message.");
+        return;
+    }
+
+    if (myclass === "Empty") {
+        alert("Please select your preferred option to reach back to you.");
+        return;
+    }
+
+    if (!urgent) {
+        alert("Please specify if it is urgent.");
+        return;
+    }
+
+
+    var workChecked = false;
+    for (var i = 0; i < work.length; i++) {
+        if (work[i].checked) {
+            workChecked = true;
+            break;
+        }
+    }
+    if (!workChecked) {
+        alert("Please select if you work in any of the listed industries.");
+        return;
+    }
+
+  
+    
+
+    alert("Form submitted successfully!");
+}
+
+
+	</script>
+	
+  </head>
+
+  <body>
+    <div id="banner">
+		<h1> LISA-CLAUDIA LEVY'S PORTFOLIO </h1>
+		<hr>
+	</div>
+	<div class=" topnav" id="mytopnav">
+		<a href="index.html" class=" active"> Home</a>
+		<a href="contact.htm" class=" active"> Contact</a>
+  
+	
+		<div class="dropdown">
+			<button class="dropdownbutton">Entrepreneurship</button>
+			<div class=" dropdowncontent">
+				<a href= "Mercyships.htm">Healthcare in Africa</a>
+				<a href="earthworm.htm">Farming in Indonesia </a>
+                <a href="wewan2live.htm">WEWAN2LIVE  </a>
+				
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropdownbutton">Creativity</button>
+			<div class=" dropdowncontent">
+				<a href= "broom_closet_art.htm">Art Installation on society's judgement</a>
+				<a href="colorful_covid.htm">Colorful Covid</a>
+				
+			</div>
+		</div>
+			<div class="dropdown">
+				<button class="dropdownbutton">Community Impact</button>
+				<div class=" dropdowncontent">
+					<a href= "preserving_culture.htm">Preserving Culture</a>
+					<a href="elderly.htm">No Elderly left behind</a>
+					
+				</div>
+			</div>
+		
+			<a href="index.html#funfact" class=" active"> Fun fact</a>
+		
+		</div>
+		
+	</div>
+	<!-- Your HTML goes here -->
+	
+    <div   id="funfact" class=" boxwhitemiddle">
+        <h2> Contact :</h2> </br>
+    
+        Name: Lisa-CLaudia Levy </br>
+        Email: lisaclaudialevy@gmail.com </br>
+        Number: + 1 (857) 465 9929 // +41 79 195 1002 </br>
+        <a href= "https://www.linkedin.com/in/lisa-claudia-levy/"  > Linkedin</a>  </br>
+    </br>
+    </div>
+
+
+    <p> <a href="sitemap.htm" > Sitemap link</a></p>
+
+
+  </body>
+
+</html>

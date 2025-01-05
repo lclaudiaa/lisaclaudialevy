@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html/javascript/css; charset=utf-8" /> 
+	<meta name= "author" content ="Lisa-CLaudia Levy" />
+	<meta name= "description" content ="Lisa-CLaudia Levy home page" />
+	<meta name= "keywords" content ="About Lisa-CLaudia Levy, entrepreneurship, creativity, projects, impact, education, babson college, university of Geneva" />
+    <link rel="stylesheet" href ="menu.css" />
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Accordion</title>
+    <link rel="stylesheet" href ="subpages.css" type ="text/css"/>
+	<link rel="stylesheet" href ="menu.css" />
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css"/>
+  <link rel="stylesheet" href="/resources/demos/style.css"/>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+
+<script src="https://unpkg.com/three"></script>
+<script src="https://unpkg.com/three-globe"></script>
+
+	<title>Wewan2live</title>
+	<style>
+		
+		
+		p {color:black; font-family: "Avenir Light" ; text-align: center; margin-right: 20%; margin-left: 20%;margin-top: 4%; margin-bottom: 6%; ; line-height: 27px}
+		.one{color:black; font-family: "Avenir Light" ;text-align: left; width:50%;}
+		h1{font-family: "Forum";  font-weight: bold ;text-align: center; font-size: 40px; margin-right: 5%; margin-left: 5%;margin-top: 5%}
+   		body{background-image: url(background2.jpg)  ; background-size: 100%; }
+		form { color:black; font-family: "Avenir Light" ; text-align: left;
+              width:60%; margin-right:auto; margin-left:auto; 
+               
+                border:2px solid black ;
+                padding-top:1%; padding-bottom:1%; padding-left:3%;
+			margin-right: auto;
+		margin-left:auto }
+		.boxwhitemiddle{ background-color: white ; width: 60%; text-align: center;margin-left:auto; margin-right:auto; border: 2px solid black; margin-top:10%; margin-bottom: 10% }
+		.boxtextmiddle{ background-color: rgb(242, 154, 125) ; width: 80%; text-align: center;margin-left:auto; margin-right:auto; border: 2px solid black; margin-top:10%; margin-bottom: 10% }
+		.boxwhitemiddle > p {margin-left: 3%;margin-right: 3%;}
+		.boxwhiteleft{background-color: white ; width: 40%; margin-left:20%; margin-right:80%}
+		.c1{ width:30%;}
+		.c2{ width: 20%}
+  		.c3{ width:60%;text-align: left;}
+		caption{  margin-bottom: 5%;font-weight: bold ; text-align: center; }
+		table{margin-left:auto; margin-right:auto; font-family: "Forum";padding: 5%}
+		td{padding: 13px;}
+		div#imgdaimg{  text-align: center; width: 30%; height: 30%; margin-right: auto; margin-left:auto; margin-top: 10%; position: relative; overflow: hidden; max-width: 600px;  border: none;}
+		
+		img#mover{width: 10%; position: absolute }
+		
+		
+		img#daimg {
+
+  width: 100%; 
+  max-width: 600px; 
+  height: auto; 
+  margin: 0 auto; 
+  border: 3px solid black;
+display: block;
+box-sizing: border-box;
+ 
+}
+#slide-title {
+	position: absolute;
+    bottom: 0; /* Position the title at the bottom of the image */
+    left: 0; /* Align with the left edge */
+    width: 100%; /* Make the title span the full width of the image */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    color: black; /* Black text color for readability */
+    font-family: 'Avenir Light', sans-serif; /* Font styling for the title */
+    font-size: 18px; /* Adjust font size as needed */
+    font-weight: bold; /* Add bold styling if required */
+    padding: 10px; /* Padding for spacing inside the title box */
+    text-align: center; /* Align text to the left */
+    box-sizing: border-box; /* Include padding in width calculation */
+	overflow: hidden
+}
+/*#slideshow-container {
+            position: relative;
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        
+
+        #slide-title {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            display: none; 
+            font-family: 'Avenir Light', sans-serif;
+            font-size: 16px;
+        }
+
+        #slideshow-container a {
+            text-decoration: none; 
+        }*/
+.quote-text {
+    font-family: "Avenir Light";
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 27px;
+}
+		.carousel {
+      position: relative;
+      width: 80%;
+      max-width: 600px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .carousel-inner {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      will-change: transform;
+    }
+
+	.carousel img, 
+  .carousel video {
+    min-width: 100%;
+    height: auto;
+  }
+
+    .carousel-controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .carousel-controls button {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      font-size: 18px;
+    }
+
+    .carousel-controls button:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    button:focus {
+      outline: none;
+    }
+	#topBtn {
+		font-family: "Avenir Light";
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color:#fcfcfc; /* Green background */
+    color: black; /* White text */
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px; /* Padding for button size */
+    font-size: 16px; /* Slightly larger font size */
+    font-family: 'Arial', sans-serif; /* Clean font */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+#topBtn:hover {
+    background-color: hsl(16, 89%, 75%); /* Darker green on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+#topBtn:active {
+    transform: scale(1.05); /* Slightly smaller on click */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Adjust shadow on click */
+}
+#accordion h3 {
+    background-color: white; /* Remove the default jQuery UI background */
+    color: black; /* Match the text color with the rest of your document */
+    font-family: "Avenir Light", sans-serif; /* Match the font with the rest */
+    font-size: 18px; /* Adjust font size to your liking */
+    font-weight: bold; /* Make the header bold */
+    padding: 10px; /* Add some padding for spacing */
+    border: none; /* Remove any borders */
+    text-align: left; /* Align text to the left */
+    width:60%;
+    margin-right: auto;
+    margin-left:auto;
+
+}
+#accordion div p {
+    margin: 0; /* Remove paragraph margins */
+    width: 100%; /* Ensure text spans the full width */
+    text-align: middle; /* Align text to the left */
+}
+
+#accordion h3:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Optional hover effect */
+    width:60%;
+    margin-right: auto;
+    margin-left:auto;
+}
+
+#accordion div {
+    background-color: white; /* Match the background with the rest */
+    font-family: "Avenir Light", sans-serif; /* Match the font style */
+    font-size: 16px; /* Adjust font size */
+    line-height: 1.6; /* Improve readability */
+    padding: 10px; /* Add spacing around the content */
+    border-top: 1px solid black; /* Optional: add a border between headers and content */
+    margin-right: auto;
+    margin-left:auto;
+    width:60%;
+
+}
+/* globe */
+
+
+#location-details {
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 10px;
+}
+
+#details-text {
+    font-size: 18px;
+    font-style: italic;
+   
+    display: block;
+    color: black;
+}
+
+#globe-container {
+    margin: 20px auto;
+    max-width: 800px;
+    height: 500px; /* Ensure a proper height */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block; /* Ensure the container is visible */
+    overflow: hidden; /* Prevent overflow issues */
+}
+#timeline-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+}
+
+.timeline-item {
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.timeline-dot {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #FF5733;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#timeline-details {
+    margin-top: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+	</style>
+
+
+
+	<script type="text/javascript">
+
+window.onscroll = function () {
+    const topButton = document.getElementById('topBtn');
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        topButton.style.display = "block";
+    } else {
+        topButton.style.display = "none";
+    }
+};
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+		function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+		}
+		fetch('./footer.htm')  // Update to footer.htm instead of footer.html
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.text();
+    })
+    .then(data => {
+        document.getElementById('footer').innerHTML = data;
+    })
+    .catch(error => {
+        console.error('There has been a problem with your fetch operation:', error);
+    });
+		
+		 // beginning of fun fact
+		 document.addEventListener('DOMContentLoaded', () => {
+        const carouselInner = document.querySelector('.carousel-inner');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        let currentIndex = 0;
+        let startX = 0;
+        let isDragging = false;
+
+        function updateCarousel() {
+            const width = carouselInner.clientWidth;
+            carouselInner.style.transform = `translateX(-${currentIndex * width}px)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : 0;
+            updateCarousel();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex < carouselInner.children.length - 1) ? currentIndex + 1 : carouselInner.children.length - 1;
+            updateCarousel();
+        });
+
+        // Mouse/touch events for swipe functionality
+        carouselInner.addEventListener('mousedown', (e) => {
+            startX = e.clientX;
+            isDragging = true;
+        });
+
+        carouselInner.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            isDragging = true;
+        });
+
+        carouselInner.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            const currentX = e.clientX || e.touches[0]?.clientX;
+            const diff = currentX - startX;
+            if (diff > 50) {
+                prevButton.click();
+                isDragging = false;
+            } else if (diff < -50) {
+                nextButton.click();
+                isDragging = false;
+            }
+        });
+
+        carouselInner.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            const currentX = e.touches[0].clientX;
+            const diff = currentX - startX;
+            if (diff > 50) {
+                prevButton.click();
+                isDragging = false;
+            } else if (diff < -50) {
+                nextButton.click();
+                isDragging = false;
+            }
+        });
+
+        carouselInner.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        carouselInner.addEventListener('mouseleave', () => {
+            isDragging = false;
+        });
+
+        carouselInner.addEventListener('touchend', () => {
+            isDragging = false;
+        });
+
+        // Initial update to position the first video
+        updateCarousel();
+        window.addEventListener('resize', updateCarousel);
+    });
+	  // end of fun fact
+        
+	  var  posh=200;
+		function scrollText(){
+			
+			document.getElementById("mover").style.left = posh + "px";
+			
+			
+			posh += 1;
+      
+      if (posh >= 800) {
+        posh = 200; 
+      }
+				
+			
+			setTimeout("scrollText()", 5);
+	}
+// nb1: change styles
+	function changestyles(){
+		
+        document.getElementById("a").style.textAlign="center";
+        document.getElementById("a").style.color = "pink";
+        document.getElementById("a").style.fontFamily = "Lucida Handwriting";
+
+		document.getElementById("b").style.textAlign="center";
+        document.getElementById("b").style.color = "red";
+        document.getElementById("b").style.fontFamily = "Lucida Handwriting";
+		
+		document.getElementById("c").style.textAlign="center";
+        document.getElementById("c").style.color = "green";
+        document.getElementById("c").style.fontFamily = "Lucida Handwriting";
+
+		document.getElementById("d").style.textAlign="center";
+        document.getElementById("d").style.color = "brown";
+        document.getElementById("d").style.fontFamily = "Lucida Handwriting";
+
+		document.getElementById("ten").style.backgroundColor = "yellow";
+	}
+	// nb2: change text 
+	function changetext(){
+		var a = prompt("what is the first professor that you want me to like?")
+        document.getElementById("a").innerHTML=a;
+        var b = prompt("what is the second professor that you want me to like?")
+        document.getElementById("b").innerHTML=b;
+		var c = prompt("what is the third professor that you want me to like?")
+        document.getElementById("c").innerHTML=c;
+        var d = prompt("what is the fourth professor that you want me to like?")
+        document.getElementById("d").innerHTML=d;
+		alert("No way of going back! You cant change your decision anymore!")
+		
+	}
+	 // nb4: slideshow with javascript 
+	/* var myimages = new Array("IMG_0905.jpeg", "IMG_5233.JPG", '20201115_135938(0).jpg','IMG_1170.jpeg' )
+        var counter =0;
+        function showSlides(){
+            var x =document.getElementById("daimg");
+            x.src= myimages[counter];
+            ++ counter; 
+            if (counter > myimages.length -1 ){
+                counter = 0;
+            }
+            setTimeout ("showSlides()", 5000)
+        } */
+
+        // Array of objects containing image, title, and link data
+        var slides = [
+            { image: "IMG_0905.jpeg", title: "Art project in broom closet", link: "broom_closet_art.htm" },
+            { image: "IMG_5233.JPG", title: "We want to live clothing line", link: "wewan2live.htm" },
+            { image: "20201115_135938(0).jpg", title: "Colorful Covid", link: "colorful_covid.htm" },
+            { image: "IMG_1170.jpeg", title: "Colorful Covid", link:"colorful_covid.htm" }
+        ];
+
+        var counter = 0;
+
+        
+        function showSlides() {
+            var imgElement = document.getElementById("daimg");
+            var titleElement = document.getElementById("slide-title");
+            var linkElement = document.getElementById("slide-link");
+            imgElement.src = slides[counter].image;
+            titleElement.textContent = slides[counter].title;
+            linkElement.href = slides[counter].link;
+
+            counter++;
+            if (counter >= slides.length) {
+                counter = 0;
+            }
+
+           
+            setTimeout(showSlides, 5000);
+        }
+
+       
+	// nb7: Function to display a new random quote
+	const quotes = [
+    "Your time is limited, don’t waste it living someone else’s life. – Steve Jobs",
+    "Opportunities don't happen. You create them. – Chris Grosser",
+    "Don’t be afraid to give up the good to go for the great. – John D. Rockefeller",
+    "Success is not in what you have, but who you are. – Bo Bennett",
+    "Don't watch the clock; do what it does. Keep going. – Sam Levenson",
+    "The best way to predict the future is to invent it. – Alan Kay"
+];
+
+
+function getRandomQuote() {
+    const randomIndex = Math.floor(Math.random() * quotes.length); 
+    document.getElementById("quote").textContent = quotes[randomIndex]; 
+}
+
+setInterval(getRandomQuote, 5000);
+
+
+getRandomQuote(); document.addEventListener("DOMContentLoaded", function () {
+});
+   
+   
+            function locationText(id){
+
+                var detailsText =document.getElementById("details-text");
+            // Use conditional statements to display content based on location
+            if (id == "paris") {
+                detailsText.innerHTML = "Paris (2004–2013): Growing up in Paris and in a family immersed in the Art industry, I developed a deep appreciation for art and culture. Living in such a dynamic environment shaped my creative thinking and sparked my passion for exploring new ideas and perspectives.";
+            } else if (id == "geneva") {
+                detailsText.textContent = "Geneva (2013–2023): My time in Geneva was both challenging and transformative. Despite navigating difficult family circumstances, I was able to make the most of my experience in Switzerland, using it as an opportunity for personal growth and resilience.While pursuing Economics at the University of Geneva, I founded the first Jewish student association and launched We Want to Live, a lifestyle brand that combined meaningful apparel and immersive experiences to inspire reflection, connection, and purpose. ";
+            } else if (id == "boston") {
+                detailsText.textContent = "Boston (2023–2025): Transferring to Babson College marked the next chapter in my entrepreneurial journey. Here, I am focusing on tech entrepreneurship while being part of vibrant communities like eTower and Tamid. Babson is where I continue to grow as an innovator, connecting creativity and impact.";
+            } else if (id =="new-york") {
+                detailsText.textContent = "New York (2024 Summer): During the summer, I interned in the real estate sector in New York, gaining valuable experience in one of the world’s most competitive markets. This opportunity further enhanced my understanding of strategic decision-making in fast-paced environments.";
+            } else {
+                detailsText.textContent = "Click on a milestone to learn more!";
+            }}
+
+
+
+</script>
+<script>
+
+// globe: 
+// Initialize the 3D Globe
+document.addEventListener("DOMContentLoaded", function () {
+    const globe = Globe()
+        .globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
+        .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
+        .pointsData([
+            { lat: 48.8566, lng: 2.3522, size: 0.5, label: "Paris", year: "2004-2013" },
+            { lat: 46.2044, lng: 6.1432, size: 0.5, label: "Geneva", year: "2013-2023" },
+            { lat: 42.3601, lng: -71.0589, size: 0.5, label: "Boston", year: "2023-2025" },
+            { lat: 40.7128, lng: -74.0060, size: 0.5, label: "New York", year: "summer 2024" }
+        ])
+        .pointAltitude("size")
+        .pointLabel("label")
+        .pointColor(() => "#FF5733")
+        .onPointClick(point => displayLocationDetails(point))
+        (document.getElementById('globe-container'));
+});
+
+// Function to display details based on the clicked location
+function displayLocationDetails(point) {
+    const detailsText = document.getElementById("details-text");
+
+    // Conditional logic for location details
+    if (point.label === "Paris") {
+        detailsText.textContent = `Paris: I lived here from ${point.year}. It was where I discovered my love for art and culture.`;
+    } else if (point.label === "Geneva") {
+        detailsText.textContent = `Geneva: I lived here from ${point.year}. It was a time of personal growth and international experiences.`;
+    } else if (point.label === "Boston") {
+        detailsText.textContent = `Boston: I lived here from ${point.year}. This was where I pursued my studies and built lifelong connections.`;
+    } else if (point.label === "New York") {
+        detailsText.textContent = `New York: I have been living here since ${point.year}. It's the city that constantly inspires my entrepreneurial spirit.`;
+    } else {
+        detailsText.textContent = "Click on a location to learn more!";
+    }
+}
+
+// Optional: Rotate the globe for a dynamic effect
+let rotationSpeed = 0.002; // Control rotation speed
+(function rotateGlobe() {
+    globe.controls().autoRotate = true;
+    globe.controls().autoRotateSpeed = rotationSpeed * 100;
+})();
+
+</script> 
+<script>
+// nb8: jquery accordeoon:
+$(document).ready(function () {
+    $("#accordion").accordion({
+        collapsible: true, // Allow all sections to collapse
+        active: false, // Start with all sections collapsed
+        heightStyle: "content" // Dynamically adjust height based on content
+    });
+});
+	</script>
+	
+	
+</head>
+
+<body   onload="showSlides(); scrollText();">
+	<audio autoplay="autoplay">
+		<source src="love.mp3" type ="audio/mp3 "/>
+	</audio>
+	<div id="banner">
+		<h1> LISA-CLAUDIA LEVY'S PORTFOLIO </h1>
+		<hr>
+	</div>
+	<div class=" topnav" id="mytopnav">
+		<a href="index.html" class=" active"> Home</a>
+		<a href="contact.htm" class=" active"> Contact</a>
+
+	
+		<div class="dropdown">
+			<button class="dropdownbutton">Entrepreneurship</button>
+			<div class=" dropdowncontent">
+				<a href= "Mercyships.htm">Healthcare in Africa</a>
+				<a href="earthworm.htm">Farming in Indonesia </a>
+                <a href="wewan2live.htm">WEWAN2LIVE  </a>
+				
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropdownbutton">Creativity</button>
+			<div class=" dropdowncontent">
+				<a href= "broom_closet_art.htm">Art Installation on society's judgement</a>
+				<a href="colorful_covid.htm">Colorful Covid</a>
+				
+			</div>
+		</div>
+			<div class="dropdown">
+				<button class="dropdownbutton">Community Impact</button>
+				<div class=" dropdowncontent">
+					<a href= "preserving_culture.htm">Preserving Culture</a>
+					<a href="elderly.htm">No Elderly left behind</a>
+					
+				</div>
+			</div>
+		
+			
+			<a href="#funfact" class=" active"> Fun fact</a>
+		</div>
+		
+		
+	</div>
+
+	<button id="topBtn" onclick="scrollToTop()" style="display:none;position:fixed;bottom:20px;right:100px; size: 50px">go to the top⬆️</button>
+	
+	<div id="imgdaimg">
+		<a id="slide-link" href="broom_closet_art.htm">
+			<img id="daimg" src="IMG_0905.jpeg" title="slide show of projects" alt="Project">
+		</a>
+		<div id="slide-title" >
+			
+			Project Title
+		</div>
+	</div>
+
+
+<div class=" boxtextmiddle" ></class>
+	<h2 id="quote" class="quote-text"> "'Restore connection' is not just for devices, it is for people too. If we cannot connect, we cannot lead." -Arianna Huffington </h2>
+	
+	</div>
+	<div class=" boxwhitemiddle"></class>
+	<h2> Welcome to my world! </h2>
+	<p> 
+		Hi! I’m Lisa-Claudia, but most people call me Claudia. I created this website as a way to share my entrepreneurial and creative journey with you. It’s a space where I showcase my projects and experiences, brought to life with visuals to tell my story.
+
+The site is organized around three themes that are close to my heart: creativity, entrepreneurship, and impact. And don’t miss the fun fact section at the end!
+
+For a closer look at my corporate and professional experience, feel free to check out my CV or LinkedIn profile. I hope you enjoy exploring my projects as much as I’ve enjoyed creating them!
+    </p>
+	</div>
+
+	
+    <div id="accordion">
+		<h3>Creativity </h3>
+		<div>
+			<p>Art opens me to a world where I have a voice. A world, where regardless of what is happening to me or what my family background is, I can express myself. Art liberates me.  However, my goal is greater than my simple liberation, I want to make people reflect. I want to have an impact... Here you will see my various creative projects, from my art installation on society's judgement to my transformation of drab medical garments during the Covid pandemic, or to my personal fashion brand. </p>
+		</div>
+		<h3>Entrepreneurship</h3>
+		<div>
+			<p>Entrepreneurial skills and innovation are another important aspect of my personality. When I signed up for my first entrepreneurship competition, a new world opened up to me. I discovered how much I enjoyed leading a team and brainstorming in a group. I freed my creativity and affirmed my personality even more. My confidence was bolstered when my hard work was compensated with winning positions 3 years in a row. My passion to help others drives me. My experiences taught me how my entrepreneurial skills and creativity could have an impact. From those, I developed a willingness to become a future social entrepreneur.</p>
+		</div>
+		<h3>Impact</h3>
+		<div>
+			<p>Thanks to my experiences, I fostered skills and developed my personality traits for an ultimate goal – to make a difference.
+                My jewish roots have always been embedded in me, and during the pandemic, I decided to become the first person in my family to keep Shabat. This means that I do not use any form of  electricity and I do not work from Friday sundown to Saturday sundown. Having suffered at school from the Middle Eastern conflict, I often wondered how we could utilize the positive benefits of entrepreneurship as a tool for peace building. I am convinced that in many ways, entrepreneurs are also community and peacebuilders.  Peace is way more than just the absence of conflict, rather it is about fostering a safe and positive community where individuals  can grow and thrive. This led me to intern at the Shimon Peres Center for Peace and Innovation, where I was selected with 10 young adults for their exclusive summer experience. I met some of our generation’s most influential entrepreneurs and our conversations reinforced my willingness to develop projects that align innovation with peacemaking.</p>
+		</div>
+	</div>
+ 
+    <!-- The above h3 will be used for showing a caption, if needed.-->
+    
+<div class="boxwhitemiddle">
+	<table> 
+		<h2> Education: </h2>
+		<tr> <td colspan="3">  In Boston, United States:</td> </tr>	
+		<tr>
+				<td class="c1"> BABSON COLLEGE, Business and Entrepreneurship School  </td>
+				<td class="c2"> Sept 2023- May 2025 </td>
+				<td class="c3"> <ul><li> Concentration in Tech Entrepreneurship
+				</li><li> GPA of last semester: 3.96/4.0 </li></ul> </td></tr>
+				
+				<!-- thisis the colspan -->
+
+		
+			
+				<tr> <td colspan="3"> In Geneva, Switzerland:</td>  </tr>	
+				<tr >
+				<td class="c1"> UNIVERSITY OF GENEVA,
+					Faculty of Management and Economics </td>
+				<td class="c2"> Sept 2021 - June 2023 </td>
+				<td class="c3"><ul><li> Major: Economics; coursework include Macro and Micro Economics, Corporate Finance, Statistics,  Introduction to Programming etc.
+				</li><li> GPA of the last semester: 5.7/6 </li></ul> </td>
+			   
+			</tr>
+			<tr>
+				<td class="c1"> INSTITUT FLORIMONT 
+					High School- 
+					Bilingual Federal Swiss Matura </td>
+				<td class="c2"> Sept 2017- June 2021 </td>
+				<td class="c3"><ul><li> Specific Option (7 hours /week):  Physics with Applied Mathematics (in Python Programming); Complimentary Option:  History and Art of other societies’ culture; Advanced Math (5 hours / week) 
+					
+					
+				</li><li> FINAL GPA: 5.4/6
+					 </li> <li> Billingual English Swiss Matura</li></ul> </td>
+				
+			</tr>
+
+			<tr>
+				<td class="c1"> ECOLINT, International School of Geneva   </td>
+				<td class="c2"> Jan 2013 - June 2015 </td>
+				<td class="c3"> <ul><li> English Section
+					
+				</li><li> American System School </li></ul></td>
+			   
+			</tr>
+			<tr> <td colspan="3">  In Paris, France:</td> </tr>	
+			<tr>
+				<td class="c1"> EIB, Ecole Internationale Bilingue Paris </td>
+				<td class="c2"> Sep 2009 - Dec 2012				</td>
+				<td class="c3"> <ul><li>Primary School</li><li>
+					Bilingual French System School </li></ul> </td>
+			  
+			</tr>
+			
+	   
+	</table>
+</div>
+<div id="timeline-container">
+    <div onclick="locationText(this.id)" class="timeline-item" id="paris">
+        <span class="timeline-dot"></span>
+        <p>2004-2013: Paris</p>
+    </div>
+    <div onclick="locationText(this.id)"class="timeline-item" id="geneva">
+        <span class="timeline-dot"></span>
+        <p>2013-2023: Geneva</p>
+    </div>
+    <div onclick="locationText(this.id)" class="timeline-item" id="boston">
+        <span class="timeline-dot"></span>
+        <p>2023-2025: Boston</p>
+    </div>
+    <div onclick="locationText(this.id)" class="timeline-item" id="new-york">
+        <span class="timeline-dot"></span>
+        <p>2024 Summer: New York</p>
+    </div>
+</div>
+
+<div id="timeline-details">
+    <p id="details-text">Click on a milestone to learn more!</p>
+</div>
+
+
+
+
+
+		<div class="boxwhitemiddle"> 
+			<h2> If you don't know which one of my projects to discover first just click on one of the 4 petals and you will be directed to a different page!</h2>
+			<!-- Image Map Generated by http://www.image-map.net/ -->
+<img src="lucky.jpg" usemap="#image-map">
+
+<map name="image-map">
+    <area target="" alt="right" title="right" href="Mercyships.htm" coords="263,179,367,62,395,148,400,223" shape="poly">
+    <area target="" alt="bottom" title="bottom" href="elderly.htm" coords="266,188,206,322,327,297" shape="poly">
+    <area target="" alt="left" title="left" href="colorful_covid.htm" coords="251,180,190,311,144,241,108,188" shape="poly">
+    <area target="" alt="top" title="top" href="earthworm.htm" coords="117,91,180,70,239,13,258,170" shape="poly">
+</map>
+		</div>
+
+		<div class="boxwhitemiddle">
+			<p> <a href="sitemap.htm" > Sitemap link</a></p>
+		</div>
+		
+		<div   id="funfact" class=" boxwhitemiddle">
+			<div class="container">
+				
+				<h2>FUN FACT:</h2>
+				
+				<p>I always try to make my presentations creative and original. Therefore, one day my friend and I brought a horse at school for our History presentation on Napoleon.</p>
+				
+				
+				<div class="carousel">
+					<div class="carousel-inner">
+					  <img src="horse.jpg" alt="horse" title="horse">
+						<video autoplay muted loop title="Presentation Video 1">
+						<source src="videohorse1.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					  </video>
+					  <video autoplay muted loop title="Presentation Video 2">
+						<source src="videohorse2.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					  </video>
+					  <video autoplay muted loop title="Presentation Video 3">
+						<source src="videohorse3.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					  </video>
+					</div>
+					<div class="carousel-controls">
+					  <button id="prev">‹</button>
+					  <button id="next">›</button>
+					</div>
+				  </div>
+			  </div>
+			<br/>
+			</div>
+		
+          
+            <div   id="funfact" class=" boxwhitemiddle">
+                <h2> Contact :</h2> </br>
+            
+                Name: Lisa-CLaudia Levy </br>
+                Email: lisaclaudialevy@gmail.com </br>
+                Number: + 1 (857) 465 9929 // +41 79 195 1002 </br>
+                <a href= "https://www.linkedin.com/in/lisa-claudia-levy/"  > Linkedin</a>  </br>
+            </br>
+            </div>
+	<div id="footer"> </div>
+
+
+
+</body>
+</html>

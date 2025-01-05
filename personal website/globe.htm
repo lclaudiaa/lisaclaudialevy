@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+	<!--    I WILL REMOVE THIS PGE AFTER GRADING -->
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<meta name= "author" content ="Lisa-CLaudia Levy" />
+	<meta name= "description" content ="Lisa-CLaudia Levy credits page" />
+	<meta name= "keywords" content ="Lisa-CLaudia Levy, credits, intellectual property, Lisa-Claudia's right" />
+     <link rel="stylesheet" href ="subpages.css" type ="text/css"/>
+	<link rel="stylesheet" href ="menu.css" />
+    <title>contact</title>
+
+	<style>
+	p {color:black; font-family: "Avenir Light" ; text-align: center; margin-right: 20%; margin-left: 20%;margin-top: 4%; margin-bottom: 6%; ; line-height: 27px}
+		ul#one{color:black; font-family: "Avenir Light" ;text-align: left; width:50%;}
+		h1{font-family: "Forum";  font-weight: bold ;text-align: center; font-size: 40px; margin-right: 5%; margin-left: 5%;margin-top: 5%}
+   		body{background-image: url(background2.jpg)  ; background-size: 100%; }
+		form { color:black; font-family: "Avenir Light" ; text-align: left;
+              width:60%; margin-right:auto; margin-left:auto; 
+               
+                border:2px solid black ;
+                padding-top:1%; padding-bottom:1%; padding-left:3%;
+			margin-right: auto;
+		margin-left:auto }
+		.boxwhitemiddle{ background-color: white ; width: 60%; text-align: center;margin-left:auto; margin-right:auto; border: 2px solid black; margin-top:10%; margin-bottom: 10% }
+		.boxwhitemiddle > p {margin-left: 3%;margin-right: 3%;}
+		.boxwhiteleft{background-color: white ; width: 40%; margin-left:20%; margin-right:80%}
+		.c1{ width:30%;}
+		.c2{ width: 20%}
+  		.c3{ width:60%;text-align: left;}
+		caption{  margin-bottom: 5%;font-weight: bold ; text-align: center; }
+		table{margin-left:auto; margin-right:auto; font-family: "Forum";padding: 5%}
+		td{padding: 13px;}
+		#globe-container {
+    margin: 20px auto;
+    max-width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#location-details {
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 10px;
+}
+
+#details-text {
+    font-size: 18px;
+    font-style: italic;
+}
+
+	
+    
+    </style>
+	<script>
+		// Initialize the 3D Globe
+const globe = Globe()
+    .globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg') // Base map texture
+    .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png') // Background
+    .pointsData([
+        { lat: 48.8566, lng: 2.3522, size: 0.5, label: "Paris", year: "2005-2010" },
+        { lat: 46.2044, lng: 6.1432, size: 0.5, label: "Geneva", year: "2011-2014" },
+        { lat: 42.3601, lng: -71.0589, size: 0.5, label: "Boston", year: "2015-2019" },
+        { lat: 40.7128, lng: -74.0060, size: 0.5, label: "New York", year: "2020-Present" }
+    ])
+    .pointAltitude("size") // Set the marker altitude
+    .pointLabel("label") // Add a hover tooltip with the location name
+    .pointColor(() => "#FF5733") // Marker color
+    .onPointClick(point => displayLocationDetails(point)) // Handle click events
+    (document.getElementById('globe-container'));
+
+// Function to display details based on the clicked location
+function displayLocationDetails(point) {
+    const detailsText = document.getElementById("details-text");
+
+    // Conditional logic for location details
+    if (point.label === "Paris") {
+        detailsText.textContent = `Paris: I lived here from ${point.year}. It was where I discovered my love for art and culture.`;
+    } else if (point.label === "Geneva") {
+        detailsText.textContent = `Geneva: I lived here from ${point.year}. It was a time of personal growth and international experiences.`;
+    } else if (point.label === "Boston") {
+        detailsText.textContent = `Boston: I lived here from ${point.year}. This was where I pursued my studies and built lifelong connections.`;
+    } else if (point.label === "New York") {
+        detailsText.textContent = `New York: I have been living here since ${point.year}. It's the city that constantly inspires my entrepreneurial spirit.`;
+    } else {
+        detailsText.textContent = "Click on a location to learn more!";
+    }
+}
+
+// Optional: Rotate the globe for a dynamic effect
+let rotationSpeed = 0.002; // Control rotation speed
+(function rotateGlobe() {
+    globe.controls().autoRotate = true;
+    globe.controls().autoRotateSpeed = rotationSpeed * 100;
+})();
+
+	</script>
+	
+  </head>
+
+  <body>
+    <div id="banner">
+		<h1> LISA-CLAUDIA LEVY'S PORTFOLIO </h1>
+		<hr>
+	</div>
+	<div class=" topnav" id="mytopnav">
+		<a href="index.html" class=" active"> Home</a>
+		<a href="contact.htm" class=" active"> Contact</a>
+        <a href="aboutme.htm" class=" active"> About me</a>
+		
+	
+		<div class="dropdown">
+			<button class="dropdownbutton">Entrepreneurship</button>
+			<div class=" dropdowncontent">
+				<a href= "Mercyships.htm">Healthcare in Africa</a>
+				<a href="earthworm.htm">Farming in Indonesia </a>
+				<a href="wewan2live.htm">WEWAN2LIVE  </a>
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropdownbutton">Creativity</button>
+			<div class=" dropdowncontent">
+				<a href= "broom_closet_art.htm">Art Installation on society's judgement</a>
+				<a href="colorful_covid.htm">Colorful Covid</a>
+				
+			</div>
+		</div>
+			<div class="dropdown">
+				<button class="dropdownbutton">Community Impact</button>
+				<div class=" dropdowncontent">
+					<a href= "preserving_culture.htm">Preserving Culture</a>
+					<a href="elderly.htm">No Elderly left behind</a>
+					
+				</div>
+			</div>
+		
+			<a href="credits.htm" class=" active"> Credits</a>
+			<a href="index.html#funfact" class=" active"> Fun fact</a>
+		</div>
+		
+	
+	</div>
+	<!-- Your HTML goes here -->
+	<div class=" boxwhitemiddle"></class>
+        <div id="globe-container" style="width: 100%; height: 500px;"></div>
+
+<!-- Explanation Section -->
+<div id="location-details" style="text-align: center; margin-top: 20px;">
+    <p id="details-text" style="font-size: 18px; font-family: Arial, sans-serif;">Click on a location to learn more!</p>
+</div>
+
+<script src="https://unpkg.com/three"></script>
+<script src="https://unpkg.com/three-globe"></script>
+		<div class="boxwhitemiddle">
+			<p> <a href="sitemap.htm" > Sitemap link</a></p>
+		</div>
+  </body>
+</html>

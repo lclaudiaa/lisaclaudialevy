@@ -1,0 +1,62 @@
+p {color:black; font-family: "Avenir Light" ; text-align: center; margin-right: 20%; margin-left: 20%;margin-top: 4%; margin-bottom: 6%; font-size: 20px; line-height: 27px}
+	h1{font-family: "Forum"; font-weight: bold ; text-align: center; font-size: 50px; margin-right: 5%; margin-left: 5%;margin-bottom: 0%}
+   h2{font-family: "Forum"; font-weight: bold ; text-align: center; font-size: 30px; margin-right: 5%; margin-left: 5%;margin-bottom: 5%}
+    body{background-image: url(background2.jpg)  ; background-size: 100%; }
+   @font-face {
+  font-family: Forum;
+  src: url(Forum-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 32px;
+  }
+  
+  .row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 700px) {
+    .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 500px) {
+    .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
